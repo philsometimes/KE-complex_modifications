@@ -405,6 +405,40 @@
             }]
         },
         {
+            "description": "Mac OSX RDP: Save As",
+            "manipulators": [{
+                "type": "basic",
+                "from": {
+                    "key_code": "s",
+                    "modifiers": {
+                        "mandatory": [
+                            "command",
+                            "shift"
+                        ]
+                    }
+                },
+                "to": [{
+                    "key_code": "s",
+                    "modifiers": [
+                        "control",
+                        "shift"
+                    ]
+                }],
+                "conditions": [{
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                        "^com\\.microsoft\\.rdc$",
+                        "^com\\.microsoft\\.rdc\\.mac$",
+                        "^com\\.microsoft\\.rdc\\.macos$",
+                        "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                        "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                        "^com\\.teamviewer\\.TeamViewer$",
+                        "^com\\.vmware\\.horizon$"
+                    ]
+                }]
+            }]
+        },
+        {
             "description": "Mac OSX RDP: New",
             "manipulators": [{
                 "type": "basic",
@@ -846,7 +880,7 @@
                             "shift"
                         ]
                     }
-                },  
+                },
                 "to": [{
                     "key_code": "delete_or_backspace",
                     "modifiers": [
