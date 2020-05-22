@@ -967,6 +967,38 @@
                     ]
                 }]
             }]
+        },
+        {
+            "description": "Mac OSX RDP: Comment in Atom (Ctrl+/)",
+            "manipulators": [{
+                "type": "basic",
+                "from": {
+                    "key_code": "slash",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [{
+                    "key_code": "slash",
+                    "modifiers": [
+                        "control"                        
+                    ]
+                }],
+                "conditions": [{
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                        "^com\\.microsoft\\.rdc$",
+                        "^com\\.microsoft\\.rdc\\.mac$",
+                        "^com\\.microsoft\\.rdc\\.macos$",
+                        "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                        "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                        "^com\\.teamviewer\\.TeamViewer$",
+                        "^com\\.vmware\\.horizon$"
+                    ]
+                }]
+            }]
         }
     ]
 }
